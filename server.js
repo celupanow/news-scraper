@@ -1,14 +1,11 @@
 var express = require("express");
 var logger = require("morgan");
 var mongoose = require("mongoose");
-
 var axios = require("axios");
 var cheerio = require("cheerio");
-
 var db = require("./models");
 
 var PORT = 3000;
-
 var app = express();
 
 app.use(logger("dev"));
@@ -16,7 +13,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://localhost/news-scraper", { useNewUrlParser: true });
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/news-scraper";
+
+mongoose.connect(MONGODB_URI);
+
 
 app.get("/scrape", function(req, res) {
     axios.get("http://www.time.com/").then(function(response) {
@@ -55,6 +55,20 @@ app.get("/articles", function(req, res) {
     });
 });
 
+app.get("/savedarticles", function(req, res) {
+    db.Article.find({ saved: true })
+    .then(function(dbArticle) {
+        res.json(dbArticle);
+    })
+    .catch(function(err) {
+        res.json(err);
+    });
+});
+
+app.get("/saved", function(req, res) {
+    res.sendFile("saved.html", { root: "public" });
+});
+
 app.get("/articles/:id", function(req, res) {
     db.Article.findOne({ _id: req.params.id })
     .populate("note")
@@ -69,7 +83,7 @@ app.get("/articles/:id", function(req, res) {
 app.post("/articles/:id", function(req, res) {
     db.Note.create(req.body)
     .then(function(dbNote) {
-        return db.Article.findOneAndUpdate({ _id: req.params.id }, { note: dbNote_id }, { new: true });
+        return db.Article.findOneAndUpdate({ _id: req.params.id }, { note: dbNote._id }, { new: true });
     })
     .then(function(dbArticle) {
         res.json(dbArticle);
@@ -78,6 +92,40 @@ app.post("/articles/:id", function(req, res) {
         res.json(err);
     });
 });
+
+app.post("/save/:id", function(req, res) {
+  db.Article.findOneAndUpdate({ _id: req.params.id }, { saved: true }, { new: true })
+  .then(function(dbArticle) {
+      res.json(dbArticle);
+  })
+  .catch(function(err) {
+      res.json(err);
+  });
+});
+
+app.post("/remove/:id", function(req, res) {
+    db.Article.findOneAndUpdate({ _id: req.params.id }, { saved: false }, { new: true })
+    .then(function(dbArticle) {
+        res.json(dbArticle);
+    })
+    .catch(function(err) {
+        res.json(err);
+    });
+  });
+
+
+
+// app.post('/articles/save/:id', function(req, res) {
+//     db.Article.findOneAndUpdate({ _id: req.params.id }, { saved: true})
+//     .then(function(dbArticle) {
+//         res.json(dbArticle);
+//     })
+//     .catch(function(err) {
+//         res.json(err);
+//     });
+// });
+
+
 
 app.listen(PORT, function() {
     console.log("App running on port " + PORT);

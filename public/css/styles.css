@@ -1,0 +1,53 @@
+
+body {
+    background: rebeccapurple;
+}
+
+.container {
+    background: white;
+}
+
+.btn {
+    background: teal;
+}
+
+.btn:hover {
+    background: rebeccapurple;
+}
+
+.btn:visited, .btn:active, .btn:focus {
+    background: teal !important;
+}
+
+
+h1 {
+    text-align: center;
+    color: teal;
+}
+
+.nav-item {
+    margin: 20px;
+}
+
+.navbar {
+    background: rgba(255, 255, 255, 0.534);
+}
+
+#savedarticles {
+    float: left;
+}
+
+#notes {
+    float: right;
+}
+
+.save {
+    margin: 10px;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+
+
