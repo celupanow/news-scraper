@@ -1,3 +1,4 @@
+//requiring all our dependencies and the database
 var express = require("express");
 var logger = require("morgan");
 var mongoose = require("mongoose");
@@ -5,19 +6,22 @@ var axios = require("axios");
 var cheerio = require("cheerio");
 var db = require("./models");
 
+//assigning the port starting express
 var PORT = process.env.PORT || 3000;
 var app = express();
 
+//logger and morgan middleware
 app.use(logger("dev"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
+//database
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/news-scraper";
 
 mongoose.connect(MONGODB_URI);
 
-
+//a route to scrape articles from time.com
 app.get("/scrape", function(req, res) {
     axios.get("http://www.time.com/").then(function(response) {
         var $ = cheerio.load(response.data);
@@ -41,10 +45,12 @@ app.get("/scrape", function(req, res) {
             });
         });
 
-        res.send("Scrape Complete");
+        // res.send("Scrape Complete");
+        res.sendFile("/", { root: "public" });
     });
 });
 
+//a route to display all the articles in the database
 app.get("/articles", function(req, res) {
     db.Article.find({})
     .then(function(dbArticle) {
@@ -55,6 +61,7 @@ app.get("/articles", function(req, res) {
     });
 });
 
+//a route to display the saved articles
 app.get("/savedarticles", function(req, res) {
     db.Article.find({ saved: true })
     .then(function(dbArticle) {
@@ -65,10 +72,12 @@ app.get("/savedarticles", function(req, res) {
     });
 });
 
+//a route to display the saved articles page
 app.get("/saved", function(req, res) {
     res.sendFile("saved.html", { root: "public" });
 });
 
+//a route to populate the notes of a specific article
 app.get("/articles/:id", function(req, res) {
     db.Article.findOne({ _id: req.params.id })
     .populate("note")
@@ -80,6 +89,7 @@ app.get("/articles/:id", function(req, res) {
     });
 });
 
+//a route to update a specific article with a new note
 app.post("/articles/:id", function(req, res) {
     db.Note.create(req.body)
     .then(function(dbNote) {
@@ -93,6 +103,7 @@ app.post("/articles/:id", function(req, res) {
     });
 });
 
+//a route to save an article
 app.post("/save/:id", function(req, res) {
   db.Article.findOneAndUpdate({ _id: req.params.id }, { saved: true }, { new: true })
   .then(function(dbArticle) {
@@ -103,6 +114,7 @@ app.post("/save/:id", function(req, res) {
   });
 });
 
+//a route to remove an article from the saved articles
 app.post("/remove/:id", function(req, res) {
     db.Article.findOneAndUpdate({ _id: req.params.id }, { saved: false }, { new: true })
     .then(function(dbArticle) {
@@ -114,7 +126,7 @@ app.post("/remove/:id", function(req, res) {
   });
 
 
-
+//listening for the port
 app.listen(PORT, function() {
     console.log("App running on port " + PORT);
 });

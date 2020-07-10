@@ -1,3 +1,6 @@
+//model for the notes
+//title and body
+
 var mongoose = require("mongoose");
 
 var Schema = mongoose.Schema;

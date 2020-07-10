@@ -1,3 +1,8 @@
+//model for the articles
+//has the title and link
+//whether or not the article has been saved
+//and the notes
+
 var mongoose = require("mongoose");
 
 var Schema = mongoose.Schema;
