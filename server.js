@@ -5,7 +5,7 @@ var axios = require("axios");
 var cheerio = require("cheerio");
 var db = require("./models");
 
-var PORT = 3000;
+var PORT = process.env.PORT || 3000;
 var app = express();
 
 app.use(logger("dev"));
@@ -112,18 +112,6 @@ app.post("/remove/:id", function(req, res) {
         res.json(err);
     });
   });
-
-
-
-// app.post('/articles/save/:id', function(req, res) {
-//     db.Article.findOneAndUpdate({ _id: req.params.id }, { saved: true})
-//     .then(function(dbArticle) {
-//         res.json(dbArticle);
-//     })
-//     .catch(function(err) {
-//         res.json(err);
-//     });
-// });
 
 
 
