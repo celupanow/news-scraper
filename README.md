@@ -47,6 +47,15 @@ This application allows a user to scrape news articles from time.com and allows 
 
 ## Getting Started
 To get a local copy up and running follow these simple steps.
+
+
+### Prerequisites
+
+Instal
+* npm
+```sh
+npm install npm@latest -g
+```
   
 ### Installation
 
@@ -117,5 +126,5 @@ Project Link: [http://christinalupanow.com/](http://christinalupanow.com/)
 
 [product-screenshot]: images/screenshot.png
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzUyMDIyNjYsLTQ0NDI3MjgyNF19
+eyJoaXN0b3J5IjpbLTY5NTY1Nzg3NSwtNDQ0MjcyODI0XX0=
 -->
