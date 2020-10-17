@@ -5,7 +5,7 @@
  
 <h3 align="center">News Scraper</h3>
 <p align="center">
-This application allows a user to scrape news articles from time.com and 
+This application allows a user to scrape news articles from time.com and allows the user to save them. The user can then add notes to their saved articles.
 <br />
 <br />
 <a href="https://celupanow.github.io/news-scraper">View Demo</a>
@@ -117,5 +117,5 @@ Project Link: [http://christinalupanow.com/](http://christinalupanow.com/)
 
 [product-screenshot]: images/screenshot.png
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI3MjY3NjUxOCwtNDQ0MjcyODI0XX0=
+eyJoaXN0b3J5IjpbLTExNzUyMDIyNjYsLTQ0NDI3MjgyNF19
 -->
