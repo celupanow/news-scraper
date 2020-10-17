@@ -34,7 +34,7 @@ Features projects with links to deployed applications and GitHub repositories as
 <!-- ABOUT THE PROJECT -->
 
 ## About The Project
-![Portfolio](./assets/images/portfolio.png "Portfolio")
+![News Scraper](./public/images/newscraper-pacific-journey.png "News Scraper")
 
 This project was built to showcase full stack web development projects.
 
@@ -117,5 +117,5 @@ Project Link: [http://christinalupanow.com/](http://christinalupanow.com/)
 
 [product-screenshot]: images/screenshot.png
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ0NDI3MjgyNF19
+eyJoaXN0b3J5IjpbMjEzNDM4MTk0MSwtNDQ0MjcyODI0XX0=
 -->
