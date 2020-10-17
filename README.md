@@ -89,7 +89,7 @@ Christina Lupanow - christina@christinalupanow.com
 
   
 
-Project Link: [http://christinalupanow.com/](http://christinalupanow.com/)
+Project Link: [https://celupanow.github.io/news-scraper/](https://celupanow.github.io/news-scraper/)
 
 <!-- ACKNOWLEDGEMENTS -->
 
@@ -98,7 +98,7 @@ Project Link: [http://christinalupanow.com/](http://christinalupanow.com/)
   
 
 * [GitHub Pages](https://pages.github.com)
-* [bluehost](https://bluehost.com)
+* [Time](https://time.com)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
@@ -130,5 +130,5 @@ Project Link: [http://christinalupanow.com/](http://christinalupanow.com/)
 
 [product-screenshot]: images/screenshot.png
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODM2NjEyOTMyLC00NDQyNzI4MjRdfQ==
+eyJoaXN0b3J5IjpbMTIzNzY4NTkzMCwtNDQ0MjcyODI0XX0=
 -->
