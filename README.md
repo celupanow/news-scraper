@@ -51,7 +51,7 @@ To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-Instal
+You will need to have the lastest version of npm installed.
 * npm
 ```sh
 npm install npm@latest -g
@@ -65,6 +65,10 @@ npm install npm@latest -g
 
 git clone https://github.com/celupanow/news-scraper.git
 
+```
+2. Install the NPM packages
+```sh
+npm install
 ```
 
 <!-- ROADMAP -->
@@ -126,5 +130,5 @@ Project Link: [http://christinalupanow.com/](http://christinalupanow.com/)
 
 [product-screenshot]: images/screenshot.png
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY5NTY1Nzg3NSwtNDQ0MjcyODI0XX0=
+eyJoaXN0b3J5IjpbODM2NjEyOTMyLC00NDQyNzI4MjRdfQ==
 -->
