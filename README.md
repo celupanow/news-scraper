@@ -5,7 +5,7 @@
  
 <h3 align="center">News Scraper</h3>
 <p align="center">
-Features projects with links to deployed applications and GitHub repositories as well as contact information for Christina Lupanow, full stack web developer.
+This application allows a user to scrape a
 <br />
 <br />
 <a href="https://celupanow.github.io/news-scraper">View Demo</a>
@@ -36,7 +36,7 @@ Features projects with links to deployed applications and GitHub repositories as
 ## About The Project
 ![News Scraper](./public/images/newscraper-pacific-journey.png "News Scraper")
 
-This project was built to showcase full stack web development projects.
+
 
 ### Built With
 * [HTML](https://developer.mozilla.org/en-US/docs/Learn/HTML)
@@ -117,5 +117,5 @@ Project Link: [http://christinalupanow.com/](http://christinalupanow.com/)
 
 [product-screenshot]: images/screenshot.png
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEzNDM4MTk0MSwtNDQ0MjcyODI0XX0=
+eyJoaXN0b3J5IjpbLTE0MjUxNzczMjAsLTQ0NDI3MjgyNF19
 -->
