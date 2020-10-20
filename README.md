@@ -89,7 +89,7 @@ Christina Lupanow - christina@christinalupanow.com
 
   
 
-Project Link: [https://celupanow.github.io/news-scraper/](https://celupanow.github.io/news-scraper/)
+Project Link: [https://pacific-journey-58355.herokuapp.com/](https://pacific-journey-58355.herokuapp.com/)
 
 <!-- ACKNOWLEDGEMENTS -->
 
@@ -97,7 +97,7 @@ Project Link: [https://celupanow.github.io/news-scraper/](https://celupanow.gith
 
   
 
-* [GitHub Pages](https://pages.github.com)
+* [Heroku](https://heroku.com)
 * [Time](https://time.com)
 
 <!-- MARKDOWN LINKS & IMAGES -->
@@ -130,5 +130,6 @@ Project Link: [https://celupanow.github.io/news-scraper/](https://celupanow.gith
 
 [product-screenshot]: images/screenshot.png
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzNzY4NTkzMCwtNDQ0MjcyODI0XX0=
+eyJoaXN0b3J5IjpbLTE0ODE3NTA0NTAsMTIzNzY4NTkzMCwtND
+Q0MjcyODI0XX0=
 -->
