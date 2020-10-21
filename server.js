@@ -17,9 +17,9 @@ app.use(express.json());
 app.use(express.static("public"));
 
 //database
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/news-scraper";
+var DB_URI = process.env.DB_URI || "mongodb://localhost/news-scraper";
 
-mongoose.connect(MONGODB_URI);
+mongoose.connect(DB_URI);
 
 //a route to scrape articles from time.com
 app.get("/scrape", function(req, res) {
