@@ -8,7 +8,7 @@
 This application allows a user to scrape news articles from time.com and allows the user to save them. The user can then add notes to their saved articles.
 <br />
 <br />
-<a href="https://celupanow.github.io/news-scraper">View Demo</a>
+<a href="https://pacific-journey-58355.herokuapp.com/">View Demo</a>
 ·
 <a href="https://github.com/celupanow/news-scraper/issues">Report Bug</a>
 ·
@@ -130,6 +130,6 @@ Project Link: [https://pacific-journey-58355.herokuapp.com/](https://pacific-jou
 
 [product-screenshot]: images/screenshot.png
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0ODE3NTA0NTAsMTIzNzY4NTkzMCwtND
-Q0MjcyODI0XX0=
+eyJoaXN0b3J5IjpbLTYxOTc1NDE1NCwtMTQ4MTc1MDQ1MCwxMj
+M3Njg1OTMwLC00NDQyNzI4MjRdfQ==
 -->
