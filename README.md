@@ -126,10 +126,10 @@ Project Link: [https://pacific-journey-58355.herokuapp.com/](https://pacific-jou
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 
-[linkedin-url]: https://linkedin.com/in/celupanow
+[linkedin-url]: https://www.linkedin.com/in/christinalupanow
 
 [product-screenshot]: images/screenshot.png
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYxOTc1NDE1NCwtMTQ4MTc1MDQ1MCwxMj
-M3Njg1OTMwLC00NDQyNzI4MjRdfQ==
+eyJoaXN0b3J5IjpbLTE0MzIwNjAzNDAsLTYxOTc1NDE1NCwtMT
+Q4MTc1MDQ1MCwxMjM3Njg1OTMwLC00NDQyNzI4MjRdfQ==
 -->
